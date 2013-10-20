@@ -1,0 +1,62 @@
+/* 
+Colors:
+#5E3929 Primary: Dark Brown
+#CD8C52 Secondary: Lighter Brown
+#B7D1A3 Tertiary: Darker Green
+#DEE8BE Backup 1: Light Green
+#FCF7D3 Backup Two: Cream
+*/
+
+body {
+	background: url("../img/bedge_grunge.png");
+	font-family: 'Montaga', sans-serif;
+	font-size: 16px;
+	}
+
+#top-photo{
+	width: 500px;
+	}
+
+nav{
+	margin-top: 150px;
+	}
+
+
+a { 
+	color: #CD8C52;
+	text-decoration: none;
+	
+}
+
+h1 {
+	color: #5E3929;
+	font-family: 'Coda Caption', sans-serif;
+	font-size: 48px;
+	text-transform: uppercase;
+	}
+	
+h3 {
+	color: #5E3929;
+	font-family: 'Coda Caption', sans-serif;
+	font-size: 24px;
+	font-weight: bold; 
+}
+
+h4 {
+	color: #CD8C52;
+	font-family: 'Coda Caption', sans-serif;
+	font-size: 20px;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	padding: 20px 10px 20px 10px;
+	width: 250px; 
+}
+
+footer {
+	font-size: 12px;
+	}
