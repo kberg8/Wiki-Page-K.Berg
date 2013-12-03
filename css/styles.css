@@ -10,42 +10,56 @@ Colors:
 body {
 	background: url("../img/bedge_grunge.png");
 	font-family: 'Montaga', sans-serif;
-	font-size: 16px;
+	font-size: 1em; /* 16px / 16px = 1em */
+	} 
+
+nav li{
+	display: inline-block;
 	}
 
-#top-photo{
-	width: 500px;
+nav ul {
+	float: right;
 	}
 
-nav{
-	margin-top: 150px;
-	}
-
-
-a { 
+nav a:link,
+nav a:visited { 
 	color: #CD8C52;
+	padding: 0 20px;
 	text-decoration: none;
-	
+	transition: 1s;
 }
 
+nav a:hover,
+nav a:active {
+	color: #3A2113;
+	text-decoration: none;
+	}
+
+a {
+	color: #CD8C52; 
+	text-decoration: none;
+	}
+	
 h1 {
 	color: #5E3929;
 	font-family: 'Coda Caption', sans-serif;
-	font-size: 48px;
+	font-size: 2.375em; /* 38px / 16px = 2.375em */
+	margin: 0;
+	padding: 0;
 	text-transform: uppercase;
 	}
 	
 h3 {
 	color: #5E3929;
 	font-family: 'Coda Caption', sans-serif;
-	font-size: 24px;
+	font-size: 1.5em; /* 24px / 16px = 1.5em */
 	font-weight: bold; 
 }
 
 h4 {
 	color: #CD8C52;
 	font-family: 'Coda Caption', sans-serif;
-	font-size: 20px;
+	font-size: 1.25em; /* 20px / 16px = 1.25em */
 }
 
 li {
@@ -54,9 +68,156 @@ li {
 
 img {
 	padding: 20px 10px 20px 10px;
-	width: 250px; 
+	width: 100%; 
 }
 
 footer {
-	font-size: 12px;
+	font-size: .75em; /* 12px / 16px = .75em */
 	}
+	
+
+
+/* ===========================
+		FLUID GRID
+==========================*/
+
+.container {
+	margin: 0 auto; 
+	width: 960px;
+	}
+	
+.grid-50 {
+		float: left;
+		width: 50%;
+		} 
+		
+.grid-100 {
+		float: left;
+		width: 100%;
+		} 
+
+.container:before,
+.container:after {	
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+	
+/* ===========================
+		DESKTOP
+==========================*/
+
+@media screen and ( max-width: 1024px )
+{
+	.container {
+	width: 768px;
+	}
+	
+	.grid-50 {
+		float: left;
+		width: 50%;
+		} 
+		
+	.grid-100 {
+		float: left;
+		width: 100%;
+		} 
+		
+	h1 {
+		font-size: 2em;
+		}
+		
+	nav a:link,
+	nav a:visited { 
+	padding: 0 5px;
+  		}
+}	
+	
+/* END OF DESKTOP */
+
+
+/* ===========================
+		TABLET
+==========================*/
+
+@media screen and ( max-width: 768px )
+{
+	
+	.container {
+	width: 100%;
+	}
+	
+	.grid-50 {
+		float: none;
+		width: 100%;
+		} 
+		
+	.grid-100 {
+		float: none;
+		width: 100%;
+		} 
+		
+	img {
+		padding: 0;
+		}
+	
+	ul {
+		padding: 0;
+		}
+		
+	nav li {
+		display: block;
+		}
+		
+	nav ul {
+		float: none;
+		}
+}	
+	
+/* END OF TABLET */
+
+
+/* ===========================
+		PHONE
+==========================*/
+
+@media screen and  (max-width: 480px )
+{
+	.container {
+	width: 100%;
+	}
+	
+	.grid-50 {
+		float: none;
+		width: 100%;
+		} 
+		
+	.grid-100 {
+		float: none;
+		width: 100%;
+		} 
+		
+	img {
+		padding: 0;
+		}
+	
+	ul {
+		padding: 0;
+		}
+		
+	nav li {
+		display: block;
+		}
+		
+	nav ul {
+		float: none;
+		}
+}	
+	
+/* END OF PHONE */
